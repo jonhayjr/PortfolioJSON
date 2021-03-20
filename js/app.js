@@ -84,12 +84,19 @@ const modalContent= document.querySelector('.modal-content');
 const modal = document.querySelector('.modalElement');
 const overlay = document.querySelector('.overlay');
 const cards = document.querySelectorAll('.card');
-const modalClose = document.querySelector(".modal-close");
+const modalClose = document.querySelector('.modal-close');
+const body = document.querySelector('body');
 
-fetch('project.json') 
+fetch('json/project.json') 
     .then(res => res.json())
     .then (data => projects = data.projects)
-    .catch(err => console.log(err))
+    .catch(err => displayError(err))
+
+function displayError(err) {
+    let errorHTML = '<div class="error"><p>Sorry, something went wrong.  Please refresh the page and try again.</p><img src="img/error.png"></div>';
+     body.innerHTML = errorHTML;
+     console.log(err);
+    }
 
 function displayProject(index) {
    

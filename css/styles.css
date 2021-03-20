@@ -278,6 +278,21 @@ a > svg:hover {
         cursor: pointer;
     }
 
+/* Error*/
+.error {
+    color: red;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.error p {
+    padding-bottom: 1rem;
+}
+
 /* ================================= 
     Media Queries
 ==================================== */

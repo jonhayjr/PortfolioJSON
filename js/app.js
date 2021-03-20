@@ -132,8 +132,11 @@ function displayProject(index) {
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
+        const windowWidth = window.innerWidth;
+        if (windowWidth >= 768) {
         let index = card.dataset.index;
         displayProject(index);
+        }
     })
 })
 
